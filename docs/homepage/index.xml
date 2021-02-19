@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homepages on Planting space</title>
+    <link>https://Rogulik.github.io/planting-space/homepage/</link>
+    <description>Recent content in Homepages on Planting space</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://Rogulik.github.io/planting-space/homepage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CATEGORY THEORY</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/methods/category-theory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/methods/category-theory/</guid>
+      <description>TO CAPTURE
+STRUCTURE AND COMPOSITION</description>
+    </item>
+    
+    <item>
+      <title>COGNITIVE SCIENCE</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/methods/cognitive-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/methods/cognitive-science/</guid>
+      <description>TO UNDERSTAND
+REASONING AND LEARNING</description>
+    </item>
+    
+    <item>
+      <title>DEEP LEARNING</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/aproaches/deep-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/aproaches/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GOING BEYOND TODAY’S APPROACHES</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/going-beyond/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/going-beyond/</guid>
+      <description>Today there are many approaches to AI
+each with their own strengths and weaknesses.
+Rather than using them in isolation, we aim to create a system where they
+can be composed to get the best out of all, while avoiding their pitfalls.</description>
+    </item>
+    
+    <item>
+      <title>KNOWLEDGE GRAPHS</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/aproaches/knowledge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/aproaches/knowledge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KNOWLEDGE-BASED COMPUTING</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/aproaches/knowledge-based/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/aproaches/knowledge-based/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>METHODS WE USE</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/methods-we-use/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/methods-we-use/</guid>
+      <description>The goal we pursue is not easy, in order to tackle it we need to be on the
+lookout for the most useful methods. In particular our work heavily relies on
+these new and exciting scientific fields:</description>
+    </item>
+    
+    <item>
+      <title>PROBABILISTIC PROGRAMMING</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/aproaches/probabilistic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/aproaches/probabilistic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PROBABILISTIC PROGRAMMING</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/methods/probabilistic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/methods/probabilistic-programming/</guid>
+      <description>TO REPRESENT
+UNCERTAIN KNOWLEDGE</description>
+    </item>
+    
+    <item>
+      <title>PROBLEMS WE WORK ON</title>
+      <link>https://Rogulik.github.io/planting-space/homepage/problems-we-work-on/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/homepage/problems-we-work-on/</guid>
+      <description>Making use of humanity’s vast collective knowledge is
+hard and the tools we have are not sufficient
+Information is spread out and heterogeneous. This makes it hard to access and make use of it.
+Existing ways of managing information and software
+require significant manual effort.
+Many machine learning methods can not leverage our
+understanding of the world which limits their
+applications and robustness.
+Our system strives to solve these problems. It aims to provide services</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Page-join-us on Planting space</title>
+    <link>https://Rogulik.github.io/planting-space/page-join-us/</link>
+    <description>Recent content in Page-join-us on Planting space</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://Rogulik.github.io/planting-space/page-join-us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contribute on Gitlab</title>
+      <link>https://Rogulik.github.io/planting-space/page-join-us/ju-intro/contribute-on-gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/page-join-us/ju-intro/contribute-on-gitlab/</guid>
+      <description>View current issues</description>
+    </item>
+    
+    <item>
+      <title>Join the team</title>
+      <link>https://Rogulik.github.io/planting-space/page-join-us/ju-intro/contact-us/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/page-join-us/ju-intro/contact-us/</guid>
+      <description>Contact us</description>
+    </item>
+    
+    <item>
+      <title>Join the team</title>
+      <link>https://Rogulik.github.io/planting-space/page-join-us/ju-intro/join-the-team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/page-join-us/ju-intro/join-the-team/</guid>
+      <description>View open roles</description>
+    </item>
+    
+    <item>
+      <title>Julia developer</title>
+      <link>https://Rogulik.github.io/planting-space/page-join-us/open-positions/julia-developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/page-join-us/open-positions/julia-developer/</guid>
+      <description>We are looking for software developers to contribute to open and closed source
+codebases. Work time will be flexible and tasks will focus on general
+development, stats or optimization. Example issue that you could work on.</description>
+    </item>
+    
+    <item>
+      <title>Optimization researcher</title>
+      <link>https://Rogulik.github.io/planting-space/page-join-us/open-positions/optimization-researcher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rogulik.github.io/planting-space/page-join-us/open-positions/optimization-researcher/</guid>
+      <description>We are looking for a short term or part time researcher / intern to specify
+optimization problems and develop algorithms. You will work on theoretically
+interesting problems with immediate application in planning problems for AI.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,7 +1,8 @@
-baseURL = "https://rogulik.github.io/planting-space/"
+baseURL = "https://Rogulik.github.io/planting-space/"
 languageCode = "en-us"
 title = "Planting space"
 theme = "ps"
+publishDir = "docs"
 
 [[menu.main]]
     url = "/team/"
