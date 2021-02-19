@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>{{ .Title }}</title>
+    {{ partial "js" . }} {{ partial "css" . }} {{ partial "jsless" . }} {{ partial "favicon" . }}
+</head>
+
+<body>
+{{ partial "body-open" . }}
+<div class="animations">
+    <div class="lottie_bg-nodes"></div>
+    <div class="lottie_node-moving"></div>
+
+    <div class="lottie_blob-menu"></div>
+    <div class="lottie_blob-middle"></div>
+    <div class="lottie_blob-ico"></div>
+    <div class="lottie_blob-emailform"></div>
+
+    <div class="lottie_plant-1"></div>
+    <div class="lottie_plant-2"></div>
+    <div class="lottie_plant-3"></div>
+    
+    <div class="lottie_loop-dot-1"></div>
+    <div class="lottie_loop-line-1"></div>
+    <div class="lottie_loop-dot-2"></div>
+
+    <div class="lottie_leaf-up"></div>
+    <div class="lottie_plant-boat"></div>
+</div>
+<div class="main-container {{ .Params.Background }}">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/img/logo_top.svg"/>
+                </a>
+            </div>
+            {{ if (isset .Params "background") }}
+            <div class="logo-big2">
+                <a href="/">
+                    <img src="/img/logo_big.svg"/>
+                </a>
+            </div>
+            {{ end }}
+            <div class="menu">
+                <nav class="float-left">
+                    <ul class="list">
+                        {{ range .Site.Menus.main }}
+                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                        {{ end }}
+                    </ul>
+                </nav>
+                <div class="menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </header>

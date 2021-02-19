@@ -1,0 +1,53 @@
+{{ partial "header" . }}
+<main>
+    <section>
+        <article>
+            <header>
+                <h1 class="team-header text-center">{{ .Title }}</h1>
+            </header>
+            <div class="team">
+                {{range first 3 (sort (where .Site.Pages "Type" "=" "team-member") ".Params.sort" "asc" ) }}
+                <div class="person">
+                    <div class="img-crop"><img src="{{ .Params.Img }}"/></div>
+                    <div class="person-main-name">{{ .Params.name }}</div>
+                    <div class="person-info">
+                        <h2 class="person-name">{{ .Params.name }}</h2>
+                        {{ .Content }}
+                        <a href="{{ .Params.Link }}">{{ .Params.url_label }}</a>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </article>
+    </section>
+    <section>
+        <div class="team-intro">
+            {{ .Content }}
+        </div>
+        <p></p>
+    </section>
+    <section>
+        <article>
+            {{range first 1 (where .Site.Pages "Type" "=" "ways-of-work") }}
+            <header>
+                <h2 class="ways-of-work">{{ .Title }}</h2>
+            </header>
+            {{ .Content | replaceRE "<p>" "<p class=\"text-justify f-light ways-of-work-text\">" | safeHTML }}
+            {{ end }}
+        </article>
+    </section>
+    <section>
+        <article class="article-values">
+            {{range first 1 (where .Site.Pages "Type" "=" "value") }}
+            <header>
+                <h2 class="values">{{ .Title }}</h2>
+            </header>
+            {{ .Content | replaceRE "<p>" "<p class=\"value-text\">" | safeHTML }}
+            {{ end }}
+            {{range ( sort (where .Site.Pages "Type" "=" "values") ".Params.sort" "asc") }}
+            {{ .Content | replaceRE "<p>" "<p class=\"value-text\">" | safeHTML }}
+            {{ end }}
+        </article>
+    </section>
+</main>
+{{ partial "footer" . }}

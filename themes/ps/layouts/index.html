@@ -1,0 +1,275 @@
+{{ partial "header" . }}
+<main>
+    <section class="logo-section" style="height: 200px; width: 200px;">
+        <div class="logo-big">
+            <a href="/">
+                <img src="/img/logo_big.svg"/>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+    <section>
+        <article>
+            <header>
+                <h2 class="text-center intro-text">
+                    {{ (.Content | replaceRE "<p>" "" | safeHTML) | replaceRE "</p>" "" | safeHTML  }}
+                </h2>
+            </header>
+        </article>
+        {{range first 1 (where .Site.Pages "Type" "=" "problem")}}
+        <article>
+            <header>
+                <h3 class="text-center intro-head">
+                    {{ .Title }}
+                </h3>
+            </header>
+                {{ .Content | replaceRE "<p>" "<p class=\"f12 text-center intro-text intro-problems-we-work\">" | safeHTML }}
+        </article>
+        {{ end }}
+        <article class="methods-article">
+            {{range first 1 (where .Site.Pages "Type" "=" "methods")}}
+            <header>
+                <h3 class="text-center intro-head intro-head2">
+                    {{ .Title }}
+                </h3>
+            </header>
+            {{ .Content | replaceRE "<p>" "<p class=\"f12 text-center intro-text intro-methods\">" | safeHTML }}
+            {{ end }}
+
+            <div class="methods">
+                {{ range first 3 ( sort (where .Site.Pages "Type" "=" "method") ".Params.sort" "asc" ) }}
+                <div class="method">
+                    <div class="method-title"><a href="{{ .Params.Link }}" target="_blank"><strong>{{ .Title }}</strong></a></div>
+                    <div class="method-ico"><img src="{{ .Params.Ico }}"/></div>
+                    <div class="method-txt">{{ .Content }}</div>
+                </div>
+            {{ end }}
+            </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <header>
+                {{range first 1 (where .Site.Pages "Type" "=" "aproaches-main")}}
+                <header>
+                    <h3 class="text-center intro-head intro-head3">
+                        {{ .Title }}
+                    </h3>
+                </header>
+                {{ .Content | replaceRE "<p>" "<p class=\"f12 text-center approach-intro f-light\">" | safeHTML }}
+                {{ end }}
+            </header>
+            <div class="ps-table">
+                <div class="table-header">
+                    <div class="table-row">
+                        <div class="table-col">Approach</div>
+                        <div class="table-col">
+                            <div class="pr-3 ico plus-ico"></div>
+                            Strengths
+                        </div>
+                        <div class="table-col">
+                            <div class="ico minus-ico"></div>
+                            Weaknesses
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="table-body">
+                    {{range (sort (where .Site.Pages "Type" "=" "approach") ".Params.sort" "asc") }}
+                    <div class="table-row">
+                        <div class="table-col"><a href="{{ .Params.Link }}" target="_blank"><strong>{{ .Title }}</strong></a></div>
+                        <div class="table-col">{{ .Params.Strength }}</div>
+                        <div class="table-col">{{ .Params.Weakness }}</div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <!-- Begin Mailchimp Signup Form -->
+        <div id="mc_embed_signup">
+            <form action="https://space.us20.list-manage.com/subscribe/post?u=384a3d5b51e32c2fcbab0ebd2&amp;id=1059c0fb6e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll" class="input-group">
+                    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_384a3d5b51e32c2fcbab0ebd2_1059c0fb6e" tabindex="-1" value=""></div>
+                    <div class="input-group-append">
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--End mc_embed_signup-->
+    </section>
+    <section class="news">
+        <header>
+            <h4 class="news-header">News feed</h4>
+        </header>
+        <div class="feeds">
+            <div class="feed">
+                <div class="subtitle">
+                    <div class="subtitle-ico"></div>
+                    <div class="subtitle-text">
+                        PlantingSpace<br/>
+                        PlantingSpace@mas.to
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="feed-content">
+                   
+                </div>
+                <div class="feed-date"></div>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    function viewPort() {
+        var width = $(window).width()
+        if (width <= 375) {
+            calc = (parseFloat(width) / parseFloat(375))
+            scale = 0.5 * calc
+            scale = scale.toFixed(2)
+            $('meta[name=viewport]').attr('content', 'user-scalable=yes, initial-scale=' + scale + ', maximum-scale=' + scale + ', width=750')
+        }else if(width >= 1024){
+            $('meta[name=viewport]').attr('content', 'user-scalable=yes, initial-scale=' + 1 + ', maximum-scale=' + 1 + ', width=device-width')
+        } else {
+            $('meta[name=viewport]').attr('content', 'user-scalable=yes, initial-scale=.5, maximum-scale=.5, width=750')
+        }
+    }
+    
+    function menu() {
+        var scrollTop = $(window).scrollTop()
+        var width = $(window).width()
+        var top = 426
+        var force = $(".main-container").hasClass("joinus") || $(".main-container").hasClass("team")
+        if (scrollTop > 80 || force || width >= 1024) {
+            $(".main-container").addClass("fixed")
+            $(".logo-big").css('top', '')
+        } else {
+            result = top - scrollTop
+            $(".logo-big").css('top', result + 'px')
+            $(".main-container").removeClass("fixed")
+        }
+    }
+    
+    viewPort()
+    $(function () {
+        var width = $(window).width()
+        if(width >= 1024){
+            $(".menu").addClass('collapsed')
+        }
+        $(document).on("click", '.contact,a[href="#contact"]', function () {
+            console.log('scrolldown')
+            $('html, body').animate({
+                scrollBottom: $(".footer-header").offset().top
+            }, 2000)
+        })
+        //load feed
+    })
+    
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_node-moving'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/nod_moving.json' // the path to the animation json
+    })
+
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_bg-nodes'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/nods.json' // the path to the animation json
+    })
+
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_plant-1'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/plant_1.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_blob-menu'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/blob_menu.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_blob-middle'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/blob_middle.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_plant-2'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/plant_2.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_blob-ico'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/blob_ico.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_plant-3'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/plant_3.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_blob-emailform'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/blob_emailform.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_leaf-up'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/leaf_up.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_plant-boat'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/data/plant_boat.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_loop-dot-1'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/data/loop_dot_1.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_loop-line-1'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/data/loop_line_1.json' // the path to the animation json
+    })
+    lottie.loadAnimation({
+        container: document.querySelector('.lottie_loop-line-2'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/data/loop_line_2.json' // the path to the animation json
+    })
+</script>
+{{ partial "footer" . }}

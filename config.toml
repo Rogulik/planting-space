@@ -1,0 +1,19 @@
+baseURL = "https://rogulik.github.io/planting-space/"
+languageCode = "en-us"
+title = "Planting space"
+theme = "ps"
+
+[[menu.main]]
+    url = "/team/"
+    name = "TEAM"
+    weight = 1
+
+[[menu.main]]
+    url = "/joinus/"
+    name = "JOIN US"
+    weight = 2
+
+[[menu.main]]
+    url = "#contact"
+    name = "CONTACT"
+    weight = 3

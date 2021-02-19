@@ -1,0 +1,61 @@
+{{ partial "header" . }}
+<main>
+    <section>
+        <article>
+            <header>
+                <h1 class="joinus-header text-center">{{ .Title }}</h1>
+            </header>
+            <div class="main-topics">
+                {{range first 3 (sort (where .Site.Pages "Type" "=" "joinus-intro") ".Params.sort" "asc") }}
+                <div class="main-topic">
+                    {{ .Title }}<br/>
+                    {{ .Content }}
+                </div>
+                {{ end }}
+            </div>
+        </article>
+    </section>
+    <section class="joinus-intro-section">
+        <div class="joinus-intro">
+            {{ .Content | replaceRE "<p>" "<p class=\"m-0 text-center\">" | safeHTML }}
+        </div>
+        <p></p>
+    </section>
+    <section>
+        <article>
+            <header>
+                <h2 class="open-positions">OPEN POSITIONS</h2>
+            </header>
+        </article>
+        <div class="jobs">
+            {{range first 2 (sort (where .Site.Pages "Type" "=" "job") ".Params.sort" "asc") }}
+            <div class="job">
+                <div class="job-title">
+                    <div class="icon"><img src="{{ .Params.Img }}"></div>
+                    <strong>{{ .Title }}</strong>
+                </div>
+                <div class="job-desc">
+                    {{ .Content  }}
+                </div>
+                <div class="job-exp">
+                    <div class="job-exp-title">
+                        <strong>Useful experience</strong>
+                    </div>
+                    <div class="job-exp-content {{ .Params.ExpBrackets }}">
+                        {{ .Params.Experience | replaceRE ";" "<br />" | safeHTML }}
+                    </div>
+                </div>
+                <div class="job-resp">
+                    <div class="job-resp-title">
+                        <strong>Responsibilities</strong>
+                    </div>
+                    <div class="job-resp-content  {{ .Params.ResBrackets }}">
+                        {{ .Params.Responsibilities | replaceRE ";" "<br />" | safeHTML }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+</main>
+{{ partial "footer" . }}

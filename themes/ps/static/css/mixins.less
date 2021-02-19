@@ -1,0 +1,63 @@
+.scaleWidth(@value) {
+  @prop2: (@scalePoint)*1px;
+  @prop3: (@scalePoint+1)*1px;
+  @media (max-width: @prop2) {
+    @w1: @value*1px;
+    max-width: @w1;
+  }
+  @media (min-width: @prop3) {
+    @w2: @scalePointFactor * @value*1px;
+    max-width: @w2;
+  }
+}
+
+.scale (@prop, @value1) {
+  @prop2: (@scalePoint)*1px;
+  @prop3: (@scalePoint+1)*1px;
+  @media (max-width: @prop2) {
+      @{prop}: ((@vw * @value1)/375)*1px;
+  }
+  @media (min-width: @prop3) {
+      @{prop}: ((@vw * @scalePointFactor * @value1)/375)*1px;
+  }
+}
+
+
+
+.scale (@prop, @value1, @value2) {
+  @prop2: (@scalePoint)*1px;
+  @prop3: (@scalePoint+1)*1px;
+  @media (max-width: @prop2) {
+      @{prop}: ((@vw * @value1)/375)*1px ((@vw * @value2)/375)*1px;
+  }
+  @media (min-width: @prop3) {
+      @{prop}: ((@vw * @scalePointFactor * @value1)/375)*1px ((@vw * @scalePointFactor * @value2)/375)*1px;
+  }
+}
+
+.scale (@prop, @value1, @value2, @value3) {
+  @prop2: (@scalePoint)*1px;
+  @prop3: (@scalePoint+1)*1px;
+  @media (max-width: @prop2) {
+      @{prop}: ((@vw * @value1)/375)*1px ((@vw * @value2)/375)*1px ((@vw * @value3)/375)*1px;
+  }
+  @media (min-width: @prop3) {
+      @{prop}: ((@vw * @scalePointFactor * @value1)/375)*1px ((@vw * @scalePointFactor * @value2)/375)*1px ((@vw * @scalePointFactor * @value3)/375)*1px;
+  }
+}
+
+.scale (@prop, @value1, @value2, @value3, @value4) {
+  @prop2: (@scalePoint)*1px;
+  @prop3: (@scalePoint+1)*1px;
+  @media (max-width: @prop2) {
+      @{prop}: ((@vw * @value1)/375)*1px ((@vw * @value2)/375)*1px ((@vw * @value3)/375)*1px ((@vw * @value4)/375)*1px;
+  }
+  @media (min-width: @prop3) {
+      @{prop}: ((@vw * @scalePointFactor * @value1)/375)*1px ((@vw * @scalePointFactor * @value2)/375)*1px ((@vw * @scalePointFactor * @value3)/375)*1px ((@vw * @scalePointFactor * @value4)/375)*1px;
+  }
+}
+
+.fontSize(@points) {
+  @pixels: (153/96*@points)*1px;
+  font-size: @pixels;
+}

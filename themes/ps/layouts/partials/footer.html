@@ -1,0 +1,28 @@
+<footer>
+    <section class="footer" >
+        <article>
+            <header>
+                <h5 class="footer-header" id='#contact'>Get in touch</h5>
+            </header>
+            <div class="social">
+                {{range first 5 (sort (where (where .Site.Pages "Type" "=" "footer-contact" ) ".Params.active" "=" true) ".Params.sort" "asc" )}}
+                <a href="{{ .Params.Link }}" class="{{ .Params.Class }}">
+                    <div>
+                        <img src="{{ .Params.Ico }}"/>
+                    </div>
+                    <span>{{ .Title }}</span>
+                </a>
+                {{ end }}
+            </div>
+        </article>
+    </section>
+    <section>
+        <p class="m-0 copy">Copyright © 2021 | PlantingSpace is a limited liability company (GmbH) registered in
+            Zug, Switzerland.</p>
+    </section>
+</footer>
+</div>
+<div class="footer-container"></div>
+{{ partial "body-close" . }}
+</body>
+</html>
